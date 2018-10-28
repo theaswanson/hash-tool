@@ -32,7 +32,7 @@ namespace crisp_hash_tool
             string text = inputTextBox.Text;
 
             // if input is blank, display blank hashes
-            if (text == "")
+            if (String.IsNullOrEmpty(text))
             {
                 foreach (TextBox textBox in myTextBoxes)
                     textBox.Text = "";
