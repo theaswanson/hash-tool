@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.inputTextBox = new System.Windows.Forms.TextBox();
-            this.md4TextBox = new System.Windows.Forms.TextBox();
+            this.MD4TextBox = new System.Windows.Forms.TextBox();
             this.md4Label = new System.Windows.Forms.Label();
             this.md5Label = new System.Windows.Forms.Label();
-            this.md5TextBox = new System.Windows.Forms.TextBox();
+            this.MD5TextBox = new System.Windows.Forms.TextBox();
             this.sha1Label = new System.Windows.Forms.Label();
-            this.sha1TextBox = new System.Windows.Forms.TextBox();
+            this.SHA1TextBox = new System.Windows.Forms.TextBox();
             this.sha256Label = new System.Windows.Forms.Label();
-            this.sha256TextBox = new System.Windows.Forms.TextBox();
+            this.SHA256TextBox = new System.Windows.Forms.TextBox();
             this.sha512Label = new System.Windows.Forms.Label();
-            this.sha512TextBox = new System.Windows.Forms.TextBox();
+            this.SHA512TextBox = new System.Windows.Forms.TextBox();
             this.uppercaseCheckBox = new System.Windows.Forms.CheckBox();
             this.whirlpoolLabel = new System.Windows.Forms.Label();
-            this.whirlpoolTextBox = new System.Windows.Forms.TextBox();
+            this.WhirlpoolTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,17 +67,17 @@
             // 
             // md4TextBox
             // 
-            this.md4TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.MD4TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.md4TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.md4TextBox.Location = new System.Drawing.Point(88, 103);
-            this.md4TextBox.Name = "md4TextBox";
-            this.md4TextBox.ReadOnly = true;
-            this.md4TextBox.Size = new System.Drawing.Size(384, 23);
-            this.md4TextBox.TabIndex = 1;
-            this.md4TextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.md4TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.md4TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.MD4TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MD4TextBox.Location = new System.Drawing.Point(88, 103);
+            this.MD4TextBox.Name = "md4TextBox";
+            this.MD4TextBox.ReadOnly = true;
+            this.MD4TextBox.Size = new System.Drawing.Size(384, 23);
+            this.MD4TextBox.TabIndex = 1;
+            this.MD4TextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.MD4TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.MD4TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // md4Label
             // 
@@ -99,17 +99,17 @@
             // 
             // md5TextBox
             // 
-            this.md5TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.MD5TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.md5TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.md5TextBox.Location = new System.Drawing.Point(88, 132);
-            this.md5TextBox.Name = "md5TextBox";
-            this.md5TextBox.ReadOnly = true;
-            this.md5TextBox.Size = new System.Drawing.Size(384, 23);
-            this.md5TextBox.TabIndex = 3;
-            this.md5TextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.md5TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.md5TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.MD5TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MD5TextBox.Location = new System.Drawing.Point(88, 132);
+            this.MD5TextBox.Name = "md5TextBox";
+            this.MD5TextBox.ReadOnly = true;
+            this.MD5TextBox.Size = new System.Drawing.Size(384, 23);
+            this.MD5TextBox.TabIndex = 3;
+            this.MD5TextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.MD5TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.MD5TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // sha1Label
             // 
@@ -122,17 +122,17 @@
             // 
             // sha1TextBox
             // 
-            this.sha1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SHA1TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sha1TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sha1TextBox.Location = new System.Drawing.Point(88, 161);
-            this.sha1TextBox.Name = "sha1TextBox";
-            this.sha1TextBox.ReadOnly = true;
-            this.sha1TextBox.Size = new System.Drawing.Size(384, 23);
-            this.sha1TextBox.TabIndex = 5;
-            this.sha1TextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.sha1TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.sha1TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.SHA1TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SHA1TextBox.Location = new System.Drawing.Point(88, 161);
+            this.SHA1TextBox.Name = "sha1TextBox";
+            this.SHA1TextBox.ReadOnly = true;
+            this.SHA1TextBox.Size = new System.Drawing.Size(384, 23);
+            this.SHA1TextBox.TabIndex = 5;
+            this.SHA1TextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.SHA1TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.SHA1TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // sha256Label
             // 
@@ -145,17 +145,17 @@
             // 
             // sha256TextBox
             // 
-            this.sha256TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SHA256TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sha256TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sha256TextBox.Location = new System.Drawing.Point(88, 190);
-            this.sha256TextBox.Name = "sha256TextBox";
-            this.sha256TextBox.ReadOnly = true;
-            this.sha256TextBox.Size = new System.Drawing.Size(384, 23);
-            this.sha256TextBox.TabIndex = 7;
-            this.sha256TextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.sha256TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.sha256TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.SHA256TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SHA256TextBox.Location = new System.Drawing.Point(88, 190);
+            this.SHA256TextBox.Name = "sha256TextBox";
+            this.SHA256TextBox.ReadOnly = true;
+            this.SHA256TextBox.Size = new System.Drawing.Size(384, 23);
+            this.SHA256TextBox.TabIndex = 7;
+            this.SHA256TextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.SHA256TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.SHA256TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // sha512Label
             // 
@@ -168,17 +168,17 @@
             // 
             // sha512TextBox
             // 
-            this.sha512TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SHA512TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sha512TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sha512TextBox.Location = new System.Drawing.Point(88, 219);
-            this.sha512TextBox.Name = "sha512TextBox";
-            this.sha512TextBox.ReadOnly = true;
-            this.sha512TextBox.Size = new System.Drawing.Size(384, 23);
-            this.sha512TextBox.TabIndex = 9;
-            this.sha512TextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.sha512TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.sha512TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.SHA512TextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SHA512TextBox.Location = new System.Drawing.Point(88, 219);
+            this.SHA512TextBox.Name = "sha512TextBox";
+            this.SHA512TextBox.ReadOnly = true;
+            this.SHA512TextBox.Size = new System.Drawing.Size(384, 23);
+            this.SHA512TextBox.TabIndex = 9;
+            this.SHA512TextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.SHA512TextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.SHA512TextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // uppercaseCheckBox
             // 
@@ -204,17 +204,17 @@
             // 
             // whirlpoolTextBox
             // 
-            this.whirlpoolTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.WhirlpoolTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.whirlpoolTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whirlpoolTextBox.Location = new System.Drawing.Point(88, 248);
-            this.whirlpoolTextBox.Name = "whirlpoolTextBox";
-            this.whirlpoolTextBox.ReadOnly = true;
-            this.whirlpoolTextBox.Size = new System.Drawing.Size(384, 23);
-            this.whirlpoolTextBox.TabIndex = 12;
-            this.whirlpoolTextBox.Click += new System.EventHandler(this.TextBoxClicked);
-            this.whirlpoolTextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
-            this.whirlpoolTextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
+            this.WhirlpoolTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhirlpoolTextBox.Location = new System.Drawing.Point(88, 248);
+            this.WhirlpoolTextBox.Name = "whirlpoolTextBox";
+            this.WhirlpoolTextBox.ReadOnly = true;
+            this.WhirlpoolTextBox.Size = new System.Drawing.Size(384, 23);
+            this.WhirlpoolTextBox.TabIndex = 12;
+            this.WhirlpoolTextBox.Click += new System.EventHandler(this.TextBoxClicked);
+            this.WhirlpoolTextBox.DoubleClick += new System.EventHandler(this.CopyTextBoxText);
+            this.WhirlpoolTextBox.Enter += new System.EventHandler(this.TextBoxGainsFocus);
             // 
             // menuStrip1
             // 
@@ -293,7 +293,6 @@
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "Enter text:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -302,18 +301,18 @@
             this.ClientSize = new System.Drawing.Size(484, 286);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.whirlpoolLabel);
-            this.Controls.Add(this.whirlpoolTextBox);
+            this.Controls.Add(this.WhirlpoolTextBox);
             this.Controls.Add(this.uppercaseCheckBox);
             this.Controls.Add(this.sha512Label);
-            this.Controls.Add(this.sha512TextBox);
+            this.Controls.Add(this.SHA512TextBox);
             this.Controls.Add(this.sha256Label);
-            this.Controls.Add(this.sha256TextBox);
+            this.Controls.Add(this.SHA256TextBox);
             this.Controls.Add(this.sha1Label);
-            this.Controls.Add(this.sha1TextBox);
+            this.Controls.Add(this.SHA1TextBox);
             this.Controls.Add(this.md5Label);
-            this.Controls.Add(this.md5TextBox);
+            this.Controls.Add(this.MD5TextBox);
             this.Controls.Add(this.md4Label);
-            this.Controls.Add(this.md4TextBox);
+            this.Controls.Add(this.MD4TextBox);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -331,19 +330,19 @@
         #endregion
 
         private System.Windows.Forms.TextBox inputTextBox;
-        private System.Windows.Forms.TextBox md4TextBox;
+        private System.Windows.Forms.TextBox MD4TextBox;
         private System.Windows.Forms.Label md4Label;
         private System.Windows.Forms.Label md5Label;
-        private System.Windows.Forms.TextBox md5TextBox;
+        private System.Windows.Forms.TextBox MD5TextBox;
         private System.Windows.Forms.Label sha1Label;
-        private System.Windows.Forms.TextBox sha1TextBox;
+        private System.Windows.Forms.TextBox SHA1TextBox;
         private System.Windows.Forms.Label sha256Label;
-        private System.Windows.Forms.TextBox sha256TextBox;
+        private System.Windows.Forms.TextBox SHA256TextBox;
         private System.Windows.Forms.Label sha512Label;
-        private System.Windows.Forms.TextBox sha512TextBox;
+        private System.Windows.Forms.TextBox SHA512TextBox;
         private System.Windows.Forms.CheckBox uppercaseCheckBox;
         private System.Windows.Forms.Label whirlpoolLabel;
-        private System.Windows.Forms.TextBox whirlpoolTextBox;
+        private System.Windows.Forms.TextBox WhirlpoolTextBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
