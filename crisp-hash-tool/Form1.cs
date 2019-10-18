@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CSharpTest.Net.Crypto;
 
-namespace crisp_hash_tool
+namespace hashtool
 {
     public partial class Form1 : Form
     {
         List<TextBox> myTextBoxes = new List<TextBox>();
         TextHasher textHasher = new TextHasher();
+        FileHasher fileHasher = new FileHasher();
 
         public Form1()
         {
@@ -34,22 +35,27 @@ namespace crisp_hash_tool
 
             if (String.IsNullOrEmpty(inputText))
             {
-                ClearTextboxes();
+                ClearTextBoxes();
                 return;
             }
 
-            UpdateHashes(inputText);
-            UpdateHashTextCasing();
+            UpdateTextHashes(inputText);
         }
 
-        private void ClearTextboxes()
+        private void ClearTextBoxes()
         {
             foreach (TextBox textBox in myTextBoxes)
                 textBox.Text = "";
         }
 
-        private void UpdateHashes(string inputText)
+        private void UpdateTextHashes(string inputText)
         {
+            if (String.IsNullOrEmpty(inputText))
+            {
+                ClearTextBoxes();
+                return;
+            }
+
             textHasher.textToHash = inputText;
             MD4TextBox.Text = textHasher.GetMD4();
             MD5TextBox.Text = textHasher.GetMD5();
@@ -57,6 +63,25 @@ namespace crisp_hash_tool
             SHA256TextBox.Text = textHasher.GetSHA256();
             SHA512TextBox.Text = textHasher.GetSHA512();
             WhirlpoolTextBox.Text = textHasher.GetWhirlpool();
+            UpdateHashTextCasing();
+        }
+
+        private void UpdateFileHashes(string filePath)
+        {
+            if (String.IsNullOrEmpty(filePath))
+            {
+                ClearTextBoxes();
+                return;
+            }
+
+            fileHasher.SetFilePath(filePath);
+            MD4TextBox.Text = fileHasher.GetMD4();
+            MD5TextBox.Text = fileHasher.GetMD5();
+            SHA1TextBox.Text = fileHasher.GetSHA1();
+            SHA256TextBox.Text = fileHasher.GetSHA256();
+            SHA512TextBox.Text = fileHasher.GetSHA512();
+            WhirlpoolTextBox.Text = fileHasher.GetWhirlpool();
+            UpdateHashTextCasing();
         }
 
         private void uppercaseCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -107,7 +132,8 @@ namespace crisp_hash_tool
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form aboutForm = new About();
+            AboutBox1 aboutForm = new AboutBox1();
+            aboutForm.StartPosition = FormStartPosition.CenterParent;
             aboutForm.Show(this);
         }
 
@@ -132,8 +158,11 @@ namespace crisp_hash_tool
             }
 
             List<string> lines = new List<string>();
-            lines.Add("// Generated with crisp's Hash Tool");
-            lines.Add(inputTextBox.Text);
+            lines.Add("// Generated with Hash Tool, developed by Layer 7");
+            if (tabControl1.SelectedTab.Text == "Text")
+                lines.Add("Input text: " + inputTextBox.Text);
+            else
+                lines.Add("Input file: " + filePathTextBox.Text);
             lines.Add("MD4: " + MD4TextBox.Text);
             lines.Add("MD5: " + MD5TextBox.Text);
             lines.Add("SHA1: " + SHA1TextBox.Text);
@@ -153,6 +182,45 @@ namespace crisp_hash_tool
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void chooseFileButton_Click(object sender, EventArgs e)
+        {
+            string filePath = "";
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog.FileName;
+                }
+            }
+
+            filePathTextBox.Text = filePath;
+        }
+
+        private void filePathTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string filePath = filePathTextBox.Text;
+
+            if (String.IsNullOrEmpty(filePath))
+            {
+                ClearTextBoxes();
+                return;
+            }
+
+            UpdateFileHashes(filePath);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Text == "Text")
+                UpdateTextHashes(inputTextBox.Text);
+            else
+                UpdateFileHashes(filePathTextBox.Text);
         }
     }
 }

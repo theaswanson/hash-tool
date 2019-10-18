@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace crisp_hash_tool
+namespace hashtool
 {
     static class Program
     {

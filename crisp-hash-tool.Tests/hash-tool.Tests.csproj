@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>crisp_hash_tool.Tests</RootNamespace>
+    <RootNamespace>hashtool.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\crisp-hash-tool\crisp-hash-tool.csproj" />
+    <ProjectReference Include="..\crisp-hash-tool\hash-tool.csproj" />
   </ItemGroup>
 
 </Project>

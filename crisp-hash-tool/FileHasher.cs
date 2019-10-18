@@ -1,6 +1,7 @@
 ﻿using CSharpTest.Net.Crypto;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -9,48 +10,40 @@ using System.Threading.Tasks;
 
 namespace hashtool
 {
-    public class TextHasher: IHasher
+    public class FileHasher : IHasher
     {
-        public TextHasher (string textToHash = "")
+        private string filePath;
+        private FileStream streamToHash;
+        private byte[] fileBytes;
+        public void SetFilePath(string filePath)
         {
-            this.textToHash = textToHash;
+            this.filePath = filePath;
+            SetFileBytes();
         }
-
-        public string textToHash;
-
+        private void OpenFile()
+        {
+            streamToHash = File.OpenRead(filePath);
+        }
+        private void CloseFile()
+        {
+            streamToHash.Close();
+        }
         public string GetBase64()
         {
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(textToHash);
-            return System.Convert.ToBase64String(plainTextBytes);
+            return Convert.ToBase64String(fileBytes);
         }
-        public string GetMD5()
+
+        private void SetFileBytes()
         {
-            MD5 md5Hash = MD5.Create();
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(textToHash));
-            return BytesToHash(data);
+            OpenFile();
+            fileBytes = new byte[streamToHash.Length];
+            streamToHash.Read(fileBytes, 0, fileBytes.Length);
+            CloseFile();
         }
-        public string GetSHA1()
-        {
-            SHA1 sha1Hash = SHA1.Create();
-            byte[] data = sha1Hash.ComputeHash(Encoding.UTF8.GetBytes(textToHash));
-            return BytesToHash(data);
-        }
-        public string GetSHA256()
-        {
-            SHA256 sha256Hash = SHA256.Create();
-            byte[] data = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(textToHash));
-            return BytesToHash(data);
-        }
-        public string GetSHA512()
-        {
-            SHA512 sha512Hash = SHA512.Create();
-            byte[] data = sha512Hash.ComputeHash(Encoding.UTF8.GetBytes(textToHash));
-            return BytesToHash(data);
-        }
+
         public string GetMD4()
         {
-            // get padded uints from bytes
-            List<byte> bytes = Encoding.ASCII.GetBytes(textToHash).ToList();
+            List<byte> bytes = fileBytes.ToList();
             uint bitCount = (uint)(bytes.Count) * 8;
             bytes.Add(128);
             while (bytes.Count % 64 != 56) bytes.Add(0);
@@ -87,12 +80,47 @@ namespace hashtool
             byte[] outBytes = new[] { a, b, c, d }.SelectMany(BitConverter.GetBytes).ToArray();
             return BitConverter.ToString(outBytes).Replace("-", "").ToLower();
         }
+
+        public string GetMD5()
+        {
+            MD5 md5Hash = MD5.Create();
+            byte[] data = md5Hash.ComputeHash(fileBytes);
+            return BytesToHash(data);
+        }
+
+        public string GetSHA1()
+        {
+            SHA1 sha1Hash = SHA1.Create();
+            byte[] data = sha1Hash.ComputeHash(fileBytes);
+            return BytesToHash(data);
+        }
+
+        public string GetSHA256()
+        {
+            SHA256 sha256Hash = SHA256.Create();
+            byte[] data = sha256Hash.ComputeHash(fileBytes);
+            return BytesToHash(data);
+        }
+        public string GetSHA512()
+        {
+            SHA512 sha512Hash = SHA512.Create();
+            byte[] data = sha512Hash.ComputeHash(fileBytes);
+            return BytesToHash(data);
+        }
+
+        public string GetWhirlpool()
+        {
+            WhirlpoolManaged whirlpoolHash = new WhirlpoolManaged();
+            byte[] data = whirlpoolHash.ComputeHash(fileBytes);
+            return BytesToHash(data);
+        }
+
         public string GetROT13()
         {
             StringBuilder result = new StringBuilder();
             Regex regex = new Regex("[A-Za-z]");
 
-            foreach (char c in textToHash)
+            foreach (char c in Encoding.UTF8.GetString(fileBytes))
             {
                 if (regex.IsMatch(c.ToString()))
                 {
@@ -106,12 +134,6 @@ namespace hashtool
             }
 
             return result.ToString();
-        }
-        public string GetWhirlpool()
-        {
-            WhirlpoolManaged whirlpoolHash = new WhirlpoolManaged();
-            byte[] data = whirlpoolHash.ComputeHash(Encoding.UTF8.GetBytes(textToHash));
-            return BytesToHash(data);
         }
         private string BytesToHash(byte[] data)
         {

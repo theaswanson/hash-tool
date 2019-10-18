@@ -1,4 +1,4 @@
-﻿namespace crisp_hash_tool
+﻿namespace hashtool
 {
     partial class About
     {

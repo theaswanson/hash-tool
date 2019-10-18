@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crisp-hash-tool", "crisp-hash-tool\crisp-hash-tool.csproj", "{9B717B5C-4657-45BE-B28C-37E84EF7A1DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hash-tool", "crisp-hash-tool\hash-tool.csproj", "{9B717B5C-4657-45BE-B28C-37E84EF7A1DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crisp-hash-tool.Tests", "crisp-hash-tool.Tests\crisp-hash-tool.Tests.csproj", "{38BDDFA7-C61F-4EAA-8363-27A25A32A9FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hash-tool.Tests", "crisp-hash-tool.Tests\hash-tool.Tests.csproj", "{38BDDFA7-C61F-4EAA-8363-27A25A32A9FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("crisp-hash-tool")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Hash Tool")]
+[assembly: AssemblyDescription("A .NET application for hashing text and files.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("crisp-hash-tool")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("Layer 7")]
+[assembly: AssemblyProduct("hash-tool")]
+[assembly: AssemblyCopyright("Copyright © Layer 7 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

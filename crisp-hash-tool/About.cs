@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace crisp_hash_tool
+namespace hashtool
 {
     public partial class About : Form
     {
